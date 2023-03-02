@@ -675,9 +675,6 @@ ul {
 .testimonials {
   background-color: var(--background-color);
 }
-.testimonials .test-container {
-  
-}
 .testimonials .test-container .box{
   background-color: white;
   padding: 20px;
@@ -777,9 +774,6 @@ ul {
   100%{
     color: #777;
 }
-}
-.team-members .team-container .box p{
-  
 }
 .team-members .team-container .box .icons{
   position: absolute;
@@ -881,9 +875,6 @@ ul {
 .services .services-container .box .footer a{
   text-decoration: none;
   color: var(--main-color);
-}
-.services .services-container .box{
-  
 }
 /* End services */
 /* Start Skills */
@@ -1137,9 +1128,6 @@ ul {
   background-color: var(--background-color);
   position: relative;
 }
-.pricing .pricing-container {
-  
-}
 .pricing .pricing-container .box {
   display: flex;
   flex-direction: column;
@@ -1265,3 +1253,65 @@ ul {
   color: white;
 }
 /* End Pricing */
+/* Start top videos */
+.videos .videos-container {
+  display: flex;
+}
+@media (max-width:991px) {
+  .videos .videos-container {
+    flex-direction: column;
+  }
+}
+.videos .videos-container .headers{
+  border: 1px solid #d6d6d6;
+}
+.videos .videos-container .headers ul li{
+  padding: 20px 20px;
+  position: relative;
+}
+.videos .videos-container .headers ul li:not(.head)::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6;
+  top: 0;
+  left: 0;
+}
+.videos .videos-container .headers ul li:not(.head):hover {
+  background-color: var(--background-color);
+  color: var(--main-color);
+  cursor: pointer;
+}
+.videos .videos-container .headers ul li span{
+  display: block;
+  color: #777;
+  padding: 10px 0 0;
+}
+.videos .videos-container .headers ul .head{
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+}
+.videos .videos-container .preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--background-color);
+  flex: 1;
+}
+.videos .videos-container .preview img{
+  max-width: 100%;
+}
+@media (max-width:991px) {
+  .videos .videos-container .preview img {
+    margin-bottom: 10px;
+  }
+}
+.videos .videos-container .preview p{
+  background-color: white;
+  padding: 20px;
+}
+/* End top videos */
