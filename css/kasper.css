@@ -1315,3 +1315,96 @@ ul {
   padding: 20px;
 }
 /* End top videos */
+/* Start Statues */
+.statues {
+  background-color: var(--background-color);
+  background-image: url("../sources/stats.jpg");
+  position: relative;
+}
+.statues::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  opacity: 0.95;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.statues .container {
+  position: relative;
+  z-index: 10;
+}
+.statues .container > h2{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 70px;
+}
+.statues .statues-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.statues .statues-container .box{
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+  width: calc(25% - 20px);
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.statues .statues-container .box::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  bottom: -100%;;
+  left: 0;
+  transition: 0.3s;
+}
+.statues .statues-container .box::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  top: -100%;
+  right: 0;
+  transition: 0.3s;
+}
+.statues .statues-container .box:hover::before {
+  bottom: 0;
+}
+.statues .statues-container .box:hover::after {
+  top: 0;
+}
+@media (max-width: 767px) {
+  .statues .statues-container .box {
+    width: calc(50% - 7.5px);
+  }
+}
+@media (max-width: 576px) {
+  .statues .statues-container .box {
+    width: 100%;
+  }
+}
+.statues .statues-container .box i{
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.statues .statues-container .box h2{
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.statues .statues-container .box p{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-style: italic;
+}
+/* End Statues */
